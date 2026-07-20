@@ -3,9 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <style>
+        header{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            font-size: 30px;
+            /* margin: auto; */
+            padding: 10px 10px 10px 10px;
+            background-color: beige;
+        }
+        .content-box{
+            position: relative;
+            border: 1px solid rgb(72, 42, 42);
+            width: 50%;
+            height: 450px;
+            background-color: antiquewhite;
+            margin-top: 80px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 20px;
+            border-radius: 20px;
+            overflow: auto;
+            /* margin: auto; */
+
+        }
+
+        .profile-picture{
+            float: left;
+            width: 200px;
+            height: 200px;
+            margin-right: 20px;
+            margin-bottom: 10px;
+        }
+
+        .vertical-line{
+            position: absolute;
+            top: 0;
+            right: 290px;
+            height: 100%;
+            border-left: 1px solid black;
+        }
+
+        .profile-content{
+            margin-right: 300px;
+            text-align: justify;
+        }
+        .contact-info{
+            position:absolute;
+            top: 20px;
+            right: 20px;
+            border: 1px solid rgba(0, 0, 0, 0.673);
+            background-color: rgb(196, 221, 222);
+            width:250px;
+            height:100px;
+            text-align: center;
+            overflow: auto;
+        }
+    </style>
+    <title>Contact Card</title>
+
 </head>
 <body>
-    
+    <header>Company Contact Card</header>
+    <div class="content-box">
+        <img class="profile-picture" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6hgPJoR6eTvMuaBa18OnDjzM6g9kuDLfEo8mFxhC4EQ&s=10" alt="dp">
+        <div class = "profile-content">
+            <h2>Ardra Siva Prasad</h2>
+            <h4>System Engineer</h4>
+            <p>I am passionate Computer Science graduate with a strong interest in software development and emerging technologies. With experience in designing and developing web and mobile applications, I enjoy transforming ideas into practical, user-friendly solutions. Skilled in Java, Python, Flutter, HTML, CSS, JavaScript, and SQL, I am always eager to learn new technologies and improve technical expertise.
+            Beyond coding, I also enjoy solving challenging problems, building creative projects, and continuously exploring innovative approaches to software development. A quick learner and dedicated team player, I believe in writing clean, efficient code while creating applications that deliver meaningful user experiences. In free time, I enjoy watching movies and series, reading books, and playing games, maintaining a balance between professional growth and personal interests.</p>
+        </div>
+        <div class = "vertical-line"></div>
+        <div class="contact-info">
+            <p>Phone : 123-456-7890</p>
+            <p>Email : ardra@gmail.com</p>
+        </div>
+    </div>
 </body>
 </html>
