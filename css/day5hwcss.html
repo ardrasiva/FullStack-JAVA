@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+
+        h1,h3{
+            text-align: center;
+        }
+        .container{
+            width:50%;
+            height: 500px;
+            border: 1px solid black;
+            margin: auto;
+            padding: 20px;
+        }
+
+        p::first-line{
+            font-weight: bold;
+        }
+
+        p::first-letter{
+            font-size: 30px;
+            color: red;
+        }
+
+        blockquote::before{
+            content: "“";
+            font-size: 30px;
+        }
+
+        blockquote{
+            text-align: center;
+            color:blueviolet;
+        }
+
+        a:link{
+            color:blue;
+            text-decoration: none;
+        }
+        a:visited{
+            color: purple;
+        }
+        a:hover{
+            color: red;
+            text-decoration: underline;
+        }
+        h4{
+            display: inline-block;
+            margin-left: 20px;
+        }
+        h4 + h4{
+            color : green;
+        }
+    </style>
+    <title>Blog</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Web Development</h1>
+        <h3>Author : Ardra Siva Prasad</h3>
+        <p> Web development is one of the most valuable skills in today's digital world.
+        It combines creativity with problem-solving to build attractive and user-friendly websites.
+        Learning HTML and CSS provides a strong foundation for designing responsive web pages,
+        while JavaScript adds interactivity and functionality. With regular practice and
+        continuous learning, anyone can create professional websites and improve their
+        web development skills.</p>
+        <br>
+        <blockquote><em> Learning never exhausts the mind.</em></blockquote>
+        <h3>Read more on : <a href="#">New York Times</a></h3>
+        <h4>HTML</h4>
+        <h4>CSS</h4>
+        </div>
+</body>
+</html>
