@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        h1{
+            letter-spacing: 2px;
+            color:brown;
+            text-align: center;
+        }
+        .blog-section{
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .blog-box{
+            width:300px;
+            height: 400px;
+            border: 1px solid black;
+            padding: 25px;
+            background-color: beige;
+            margin: auto;
+        }
+        .blog-box img {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin-bottom: 10px;
+            
+        }
+         img[src$=".jpg"] {
+            border-top-right-radius: 20px;
+            border-bottom-left-radius: 20px;
+        }
+        .blog-box a[href^="https"] {
+            color: red;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .blog-box a[href^="https"] {
+            color: red;
+            font-weight: bold;
+            text-decoration: none;
+            text-align: center;
+        }
+        @media (max-width: 600px) {
+            body{
+                font-size: 14px;
+            }
+
+            .blog-section{
+                flex-direction: column;
+                align-items: center;
+                gap:20px;
+            }
+
+            .blog-box{
+                width: 90%;
+                max-width: 300px;
+                font-size: 15px;
+                gap: 20px;
+            }
+            
+        }
+        @media only screen and (orientation: portrait){
+            .blog-section{
+                background-color: rgb(255, 255, 130);
+            }
+        }
+    </style>
+    <title>Featured Blogs</title>
+</head>
+<body>
+    <h1>Featured Blogs</h1>
+    <div class="blog-section">
+        <div class="blog-box">
+            <h2>Travel Tips</h2>
+            <img src="travel.jpg" alt>
+            <a href="http://www.worldtrips.com/resources/travel-tips-for-beginners">Read More</a>
+        </div>
+        <div class="blog-box">
+            <h2>Healthy Living</h2>
+            <img src="healthy.jpg" alt="healthy living">
+            <a href="https://medlineplus.gov/healthyliving.html">Read More</a>
+        </div>
+        <div class="blog-box">
+             <h2>Web Design Ideas</h2>
+             <img src="web.jpg" alt="web designing">
+             <a href="https://dribbble.com/tags/web-design-inspiration">Read More</a>
+
+        </div>
+    </div>
+</body>
+</html>
