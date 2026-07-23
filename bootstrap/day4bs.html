@@ -4,8 +4,104 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Support Page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 </head>
 <body>
+    <div class="container justify-content-center">
+        <h3 class="display-3 text-center mt-2">Frequently Asked Questions</h3>
+        <div id="accordion">
+            <button class="btn btn-secondary btn-block text-center mt-4" data-target="#qn1" data-toggle="collapse">
+                What are your <b>support hours</b>?</button>
+            <div id = "qn1" class = "collapse" data-parent="#accordion">
+                <div class = "card card-body"><p>Our support team is <b> available 24/7.</b></p></div>
+            </div>
+
+            <button class="btn btn-secondary btn-block text-center mt-4" data-target="#qn2" data-toggle="collapse">
+                How can I <b>Reset my Password</b></button>
+            <div id = "qn2" class = "collapse" data-parent="#accordion">
+                <div class = "card card-body"><p>Click <b>"Forgot Password"</b>on the login page.</p></div>
+            </div>
+
+            <button class="btn btn-secondary btn-block text-center mt-4" data-target="#qn3" data-toggle="collapse">
+               How do I <b>Contact Support</b>?</button>
+            <div id = "qn3" class = "collapse" data-parent="#accordion">
+                <div class = "card card-body"><p>You can contact us by <b>phone, email, or live chat.</b></p></div>
+            </div>
+        </div>
+            <h4 class="display-4 text-center mt-3">Customer Support Agents</h4>
+           <div class="row mt-4">
+
+           <div class="col-md-4 mb-3">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h4 class="card-title text-success">Ardra</h4>
+                        <p class="card-text">Support Executive</p>
+
+                        <div class="dropdown">
+                            <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                                Quick Actions
+                            </button>
+
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Call</a>
+                                <a class="dropdown-item" href="#">Email</a>
+                                <a class="dropdown-item" href="#">Message</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-3">
+            <div class="card">
+                <div class="card-body text-center">
+                    <h4 class="card-title text-info">Evaniya</h4>
+                    <p class="card-text">Customer Care</p>
+
+                    <div class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                            Quick Actions
+                        </button>
+
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Call</a>
+                            <a class="dropdown-item" href="#">Email</a>
+                            <a class="dropdown-item" href="#">Message</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            </div>      
+
+            <div class="col-md-4 mb-3">
+            <div class="card">
+                <div class="card-body text-center">
+                    <h4 class="card-title text-warning">Sruthy</h4>
+                    <p class="card-text">Technical Support</p>
+
+                    <div class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                            Quick Actions
+                        </button>
+
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Call</a>
+                            <a class="dropdown-item" href="#">Email</a>
+                            <a class="dropdown-item" href="#">Message</a>
+                        </div>
+                    </div>
+
+                </div>
+        </div>
+        </div>
+
+    </div>
+   
     
 </body>
 </html>
