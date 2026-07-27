@@ -15,6 +15,9 @@
         let sugarQuantity = 5;
         let wheatQuantity = 4;
 
+        document.writeln("Cost of Rice = "+riceCost*riceQuantity+"<br>")
+        document.writeln("Cost of sugar = "+sugarCost*sugarQuantity+"<br>")
+        document.writeln("Cost of wheat = "+wheatCost*wheatQuantity+"<br>")
         let totalCost;
         totalCost = (riceCost*riceQuantity)+(sugarCost*sugarQuantity)+(wheatCost*wheatQuantity);
         
@@ -22,6 +25,7 @@
         console.log("Total Bill = " +totalCost);
 
         riceQuantity = 6;
+        document.writeln("Cost of Rice after updated = "+riceCost*riceQuantity+"<br>")
         totalCost = (riceCost*riceQuantity)+(sugarCost*sugarQuantity)+(wheatCost*wheatQuantity);
 
         document.writeln("Total Bill after updated the quantity of rice  = " +totalCost+"<br>");
