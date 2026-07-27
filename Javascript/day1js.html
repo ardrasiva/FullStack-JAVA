@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Store</title>
+</head>
+<body>
+    <script>
+        let noOfShirts=5;
+        let noOfCaps=3;
+        let shirtCost=400;
+        let capCost=150;
+
+        let totalEarnings;
+        totalEarnings = (noOfShirts * shirtCost) + (noOfCaps * capCost);
+        console.log(totalEarnings);
+        document.writeln("Total Earnings = "+totalEarnings+ "<br>");
+        shirtCost=450;
+        totalEarnings = (noOfShirts * shirtCost) + (noOfCaps * capCost);
+        console.log(totalEarnings);
+        document.writeln("Total Earnings after updated = "+totalEarnings);
+    </script>
+</body>
+</html>
