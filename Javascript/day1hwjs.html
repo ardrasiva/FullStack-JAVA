@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator for grocery shop</title>
+</head>
+<body>
+    <script>
+        let riceCost = 100;
+        let sugarCost = 150;
+        let wheatCost = 200;
+
+        let riceQuantity = 3;
+        let sugarQuantity = 5;
+        let wheatQuantity = 4;
+
+        let totalCost;
+        totalCost = (riceCost*riceQuantity)+(sugarCost*sugarQuantity)+(wheatCost*wheatQuantity);
+        
+        document.writeln("Total Bill = " +totalCost+"<br>");
+        console.log("Total Bill = " +totalCost);
+
+        riceQuantity = 6;
+        totalCost = (riceCost*riceQuantity)+(sugarCost*sugarQuantity)+(wheatCost*wheatQuantity);
+
+        document.writeln("Total Bill after updated the quantity of rice  = " +totalCost+"<br>");
+        console.log("Total Bill after updated the quantity of rice = " +totalCost);
+
+
+    </script>
+</body>
+</html>
