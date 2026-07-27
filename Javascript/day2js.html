@@ -3,9 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Library</title>
 </head>
 <body>
-    
+    <script>
+
+        let book = {
+            title : "The Alchemist",
+            author : "Paulo Coelho",
+            year : 1988,
+
+            getSummary : function(){
+                 return ("The book '" + this.title + "' was written by " + this.author + " in " + this.year + ".");
+            }
+        }
+
+        function printBookSummary(bookObj){
+            document.write(bookObj.getSummary());
+        }
+
+        printBookSummary(book);
+        
+    </script>
 </body>
 </html>
