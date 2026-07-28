@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+</head>
+<body>
+    <script>
+        var feedback = "   I loved the FOOD and the service!   ";
+        var feedbackans = feedback.trim();
+        document.writeln("After Trimming white spaces : "+feedbackans+"<br>");
+        console.log("After Trimming white spaces : "+feedbackans);
+        document.writeln("\nAfter converting to lowercase : "+feedbackans.toLowerCase()+"<br>")
+        console.log("\nAfter converting to lowercase : "+feedbackans.toLowerCase());
+        document.writeln("After Replacing 'food' with 'ambience' : " +feedbackans.replace(/food/i,"ambience")+"<br>");
+        console.log("After Replacing 'food' with 'ambience' : " +feedbackans.replace(/food/i,"ambience"));
+        document.writeln("Position of service : " +feedbackans.indexOf("service")+"<br>");
+        console.log("Position of service : " +feedbackans.indexOf("service"))
+        var feedbackarr = feedbackans.split(" ");
+        document.writeln("After converting to array : "+feedbackarr+"<br>")
+        console.log("After converting to array : "+feedbackarr)
+        
+    </script>
+</body>
+</html>

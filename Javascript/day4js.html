@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statistics widget</title>
+</head>
+<body>
+    <script>
+        let randomNum = Math.floor(Math.random() * 100)+1;
+        console.log("Random number generated : "+randomNum);
+
+        let userScore = "75";
+        
+        let userScoreInt = Number(userScore);
+        let difference = randomNum - userScoreInt;
+        console.log("Difference is : "+difference);
+
+        let roundedRoot = Math.round(Math.sqrt(userScoreInt));
+        console.log("Rounded square root of user score is : "+roundedRoot)
+
+        let pi = Math.PI;
+        console.log("Value of PI = "+pi)
+        let strToNum = "50" * 2;
+        console.log("String to number using implicit conversion : "+strToNum)
+
+    </script>
+</body>
+</html>
