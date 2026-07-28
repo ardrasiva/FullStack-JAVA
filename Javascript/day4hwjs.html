@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Results</title>
+</head>
+<body>
+    <script>
+        let randNum =  Math.floor(Math.random() * 50) + 1;
+        console.log("Random number generated for mystery level : "+randNum)
+        let userScore = "45";   
+        let userScoreInt = Number(userScore);
+        console.log("User score : "+userScoreInt)
+        let absDiff = Math.abs(randNum - userScoreInt);
+        console.log("Absolute difference between mystery level and userscore : "+absDiff);
+        let rootScore = Math.sqrt(userScore);
+        console.log("Square root of userScore ("+userScore+") is : "+rootScore);
+        console.log("Value of pi : "+Math.PI);
+        let strToNum = "20"*5;
+        console.log("Value after implicit conversion : "+strToNum);
+
+        let maxVal = Math.max(10,20,randNum);
+        let minVal = Math.min(10,20,randNum);
+
+        console.log("Maximum Value is : "+maxVal);
+        console.log("Minimum value is : "+minVal)
+    </script>
+</body>
+</html>
