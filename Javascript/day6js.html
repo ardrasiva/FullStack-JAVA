@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery Store</title>
+</head>
+<body>
+    <script>
+        let products = ["Apple", "Banana", "Orange", "Mango"];
+        let prices = [50,30,60,70];
+
+        let prodArr = [];
+        for(let i=0;i<products.length;i++){
+            prodArr.push("Product : "+products[i]+" - Price : "+prices[i])
+        }
+
+        document.writeln("Product names"+"<br>");
+        for(let i=0;i<products.length;i++){
+            document.writeln(prodArr[i]+"<br>");
+        }
+        document.writeln("<br><br>Products having prices greater than 50:")
+       let prodGreaterFifty = products.filter((product, index) => prices[index] > 50);
+       document.write(prodGreaterFifty)
+
+       prodArr = []
+       products.push("Watermelon");
+       prices.push(80);
+
+       for(let i=0;i<products.length;i++){
+            prodArr.push("Product : "+products[i]+" - Price : "+prices[i])
+        }
+       document.writeln("<br><br>Product names after updating"+"<br>");
+        for(let i=0;i<products.length;i++){
+            document.writeln(prodArr[i]+"<br>");
+        }
+
+    </script>
+</body>
+</html>
