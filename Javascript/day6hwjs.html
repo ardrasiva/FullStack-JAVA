@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Result Dashboard</title>
+</head>
+<body>
+    <script>
+        //student object
+        let student = [
+            {name : "Ardra", score : 45},
+            {name : "Evaniya", score : 61},
+            {name : "Sruthy", score : 71}
+    ];
+    document.writeln("Student names and their scores : <br>");
+    for(let i=0;i<student.length;i++){
+        document.writeln("Name : "+student[i].name+", Score : "+student[i].score+"<br>");
+    }
+
+    document.writeln("<br><br>Students who scored more than 50 <br>");
+
+    let topStudents = student.filter(filterStudents);
+    function filterStudents(value, index, array){
+        return value.score > 50;
+    }
+
+    for(let i=0;i<topStudents.length;i++){
+        document.writeln("Name : "+topStudents[i].name+", Score : "+topStudents[i].score+"<br>");
+    }
+
+    document.writeln("<br><br>Total Marks of Students : ");
+    let totalScore = student.reduce(totalFunc,0);
+
+    function totalFunc(total,value){
+        return total+value.score;
+    }
+    document.writeln(totalScore);
+
+    document.writeln("<br><br>Are all students passed ? : ")
+    let allPass = student.every(allPassed);
+    document.writeln(allPass);
+    function allPassed(value,index){
+        return value.score > 35
+    }
+
+    document.writeln("<br><br>Does any student scored above 90?");
+    let topMark = student.some(topper);
+    document.writeln(topMark);
+    function topper(value, index){
+        return value.score > 90;
+    }
+
+    let sortScore = student.sort(function(a,b){return b.score - a.score});
+    document.writeln("<br><br>Sorted Scores in descending order : <br>");
+    for(let i = 0; i < sortScore.length; i++){
+    document.writeln("Name: " + sortScore[i].name +", Score: " + sortScore[i].score +"<br>");
+
+
+}
+    </script>
+</body>
+</html>
