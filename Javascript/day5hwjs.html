@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+</head>
+<body>
+    <h3 align = "center">Profile Page</h3>
+    <button onclick="isAdminorNot()">Check Access</button>
+    <p id = "admin"></p>
+    <p id="ageExists"></p>
+    <p id = "newAdmin"></p>
+    <script>
+        let user = {
+            name : "Ardra",
+            age : 16,
+            isAdmin : true
+        };
+
+        function isAdminorNot(){
+            document.getElementById("admin").innerHTML = (user.age >= 18 && user.isAdmin
+                ? "Access Granted"
+                : "Access Denied"
+            );
+        
+            document.getElementById("ageExists").innerHTML = "Age Exists ? : "+("age" in user);
+
+            delete user.age;
+            console.log(user);
+            document.getElementById("newAdmin").innerHTML =
+                        "Name: " + user.name +
+                        "<br>Is Admin: " + user.isAdmin;
+
+        }
+
+
+    </script>
+</body>
+</html>
