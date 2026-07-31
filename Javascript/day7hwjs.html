@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Remainder</title>
+    
+</head>
+<body>
+    <h3 align="center">Event Reminder</h3>
+    <b>Enter the date : </b><input type="date" id="pastdate">
+    <button onclick="showDetails()">Show Details</button>
+    <p id="details"></p>
+    <p id = "yearsPassed"></p>
+
+    <script>
+        function showDetails(){
+            let inputD = document.getElementById("pastdate").value;
+            let inputDate = new Date(inputD);
+
+            let year = inputDate.getFullYear();
+            let date = inputDate.getDate();
+            let months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+            let month = months[inputDate.getMonth()];
+
+            let today = new Date();
+            let diff = today.getFullYear() - year;
+            if(today.getMonth() < inputDate.getMonth()  || (today.getMonth() < inputDate.getMonth() && today.getDate() < inputDate.getDate)){
+                diff--;
+            }
+            document.getElementById("details").innerHTML = "Year = "+year+"<br>Month = "+month+"<br>Date = "+date+"<br> Full years passed since that day = "+diff;
+            if(diff >= 1){
+                document.getElementById("yearsPassed").innerHTML = "It has been more than a year since that date.";
+            }
+            else{
+                document.getElementById("yearsPassed").innerHTML = "It has been less than a year since that date."
+            }
+
+            
+            
+
+        }
+    </script>
+</body>
+</html>

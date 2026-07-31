@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Tracker</title>
+</head>
+<body>
+    <h3 align="center">Birthday Tracker</h3>
+    <button onclick="getBirthdayDetails(friend)">When is your friend's birthday?</button>
+    <p id = "birthday"></p>
+    <script>
+        let friend = {
+            name : "Ardra",
+            birthDate : "2003-12-16"
+        }
+
+        function getBirthdayDetails(friendObj){
+            let d = new Date(friendObj.birthDate)
+            let year = d.getFullYear();
+            let date = d.getDate();
+
+            let months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+
+            let month = months[d.getMonth()];
+            let today = new Date();
+            let age =  today.getFullYear() - year;
+            if(today.getMonth() < d.getMonth()  || (today.getMonth() < d.getMonth() && today.getDate() < d.getDate)){
+                age--;
+            }
+
+            
+            document.getElementById("birthday").innerHTML = friend.name+" was born on "+date+" "+month+", "+year+" and is "+age+" years old<br>"
+
+        }
+    </script>
+</body>
+</html>
