@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3 align = "center">Guessing Game</h3>
+    <p id = "output"></p>
+    <script>
+        let count=0;
+        let guess = false;
+        while(count < 5){
+            let num = parseInt(prompt("Enter the number from 1 to 5 to guess it right : "));
+            if(num<1 || num>5){
+                document.getElementById("output").innerHTML += "Invalid Input!<br>"
+                count++;
+                    continue ;
+            }
+            switch(num){
+                case 1 : 
+                    document.getElementById("output").innerHTML += "One : ";
+                    break;
+                case 2 : 
+                    document.getElementById("output").innerHTML += "Two : ";
+                    break;
+                case 3 : 
+                    document.getElementById("output").innerHTML += "Three : ";
+                    break;
+                case 4 : 
+                    document.getElementById("output").innerHTML += "Four : ";
+                    break;
+                case 5 : 
+                    document.getElementById("output").innerHTML += "Five : ";
+                    break;
+                    
+            }
+
+            if(num == 3){
+                document.getElementById("output").innerHTML += "You guessed it right!!<br>";
+                guess = true;
+                break; 
+            }
+            else{
+                document.getElementById("output").innerHTML += "Wrong guess. Try again.<br>";
+            }
+         
+            count++;
+        }
+           if(!guess){
+                 document.getElementById("output").innerHTML += "<br>Game Over.";
+            }
+    </script>
+</body>
+</html>
