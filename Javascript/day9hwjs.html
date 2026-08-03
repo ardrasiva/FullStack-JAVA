@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment Filtering</title>
+</head>
+<body>
+    <h3 align = "center">Comment Filtering</h3>
+    <p id = "output"></p>
+    <script>
+        let comment =  "I think this movie was BAD and 100% Stupid! But the Acting was Amazing and 3 actors were great.";
+        document.getElementById("output").innerHTML += "Original comment : "+comment+"<br>";
+        let bannedWordReplace = comment.replace( /(bad|ugly|stupid)/gi,"***");
+        document.getElementById("output").innerHTML += "Cleaned Comment :" +bannedWordReplace+ "<br>"
+        let hasNumber = comment.match(/\d+/g);
+        let numberCount = hasNumber.length
+        //console.log(numberCount)
+        document.getElementById("output").innerHTML += "Count of numbers used : " +numberCount+ "<br>"
+        let capitalCount = comment.match(/\b[A-Z]/g);
+        //console.log(capitalCount)
+        document.getElementById("output").innerHTML += "Capitalised word count : " +capitalCount.length+ "<br>"
+
+    </script>
+</body>
+</html>
