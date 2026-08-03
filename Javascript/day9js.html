@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment system</title>
+</head>
+<body>
+    <h1 align = "center">Comment System</h1>
+    <p id = "ogComm"></p>
+    <p id="numcheck"></p>
+    <p id="op"></p>
+    <script>
+        let comment = "My son is 12 years old. Our flat number is 45 and contact is 9876543210.";
+        document.getElementById("ogComm").innerHTML = "Original Comment : "+comment
+        let numCheck = /\d/g.test(comment);
+        document.getElementById("numcheck").innerHTML = "Does the comment have numbers ? : "+numCheck;
+        let numReplace = comment.replace(/\d+/g,"NUMBER");
+        console.log(numReplace)
+        document.getElementById("op").innerHTML = "Updated Comment : "+numReplace
+    </script>
+</body>
+</html>
