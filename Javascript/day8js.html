@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery Store Calculator</title>
+</head>
+<body>
+    <h1 align="center">Grocery Store Calculator</h1>
+    <p id = "TotalQuant"></p>
+    <script>
+        let count = 0;
+        while(count < 5){
+            let userNeed = parseInt(prompt("Enter the item code you want to buy : "));
+            let needQuant = parseInt(prompt("Enter the Quantity of that item : "));
+            let product;
+            let price;
+            switch(userNeed){
+                case 1:
+                    product = "Apple";
+                    price = 30;
+                    break;
+                case 2:
+                    product = "Banana";
+                    price = 10;
+                    break;
+                case 3: 
+                    product = "Mango";
+                    price = 50;
+                    break;
+                default:
+                    alert("Invalid Product Code");
+                    continue;
+                    
+            }
+            let total = price * needQuant;
+            if(total > 100){
+                 document.getElementById("TotalQuant").innerHTML +=  "Product: " + product +
+                                                               "<br>Quantity: " + needQuant +
+                                                               "<br>Total Price: ₹" + total + "<br>High Purchase <br><br>"
+            }
+            else{
+            document.getElementById("TotalQuant").innerHTML +=  "Product: " + product +
+                                                               "<br>Quantity: " + needQuant +
+                                                               "<br>Total Price: ₹" + total + "<br>Normal Purchase <br><br>"
+            }
+            count++;
+
+        }
+    </script>
+</body>
+</html>
