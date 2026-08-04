@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Feedback</title>
+</head>
+<body>
+    <h3 align = "center">Feedback Checker</h3>
+    <p id = "op"></p>
+    <script>
+        let feedbackMsg = `{
+            "name":"Ardra",
+            "email":"ardra@gmail.com",
+            "feedback":"Thank you for your excellent service!"
+        }`;
+        checkFeedback = () =>{
+            try {
+                let message = JSON.parse(feedbackMsg);
+                //message becomes message = {name:,email:,feedback}, then message.feedback is used to acceess feedback message to test
+                let thankCheck = /thank/i.test(message.feedback);
+                if(thankCheck){
+                    document.getElementById("op").innerHTML = "Positive feedback received.";
+                }
+                else{
+                    document.getElementById("op").innerHTML = "Feedback noted.";
+                }
+            } catch (error) {
+                document.getElementById("op").innerHTML = error.message;
+            }
+        }
+        checkFeedback();
+    </script>
+</body>
+</html>

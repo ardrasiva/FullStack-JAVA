@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User System</title>
+</head>
+<body>
+    <h3 align = "center">User System</h3>
+    <p id = "op"></p>
+    <script>
+        class User{
+            constructor(name,age,email) {
+                this.name = name;
+                this.age = age;
+                this.email = email  
+            }
+
+            get getName(){
+                return this.name;
+            }
+            get getAge(){
+                return this.age;
+            }
+            set setEmail(newEmail){
+                let atTheRateCheck = /@/g.test(newEmail);
+                if(atTheRateCheck){
+                    this.email = newEmail;
+                }
+                else{
+                    document.getElementById("op").innerHTML = "Invalid format of email!<br><br>"
+                }
+            }
+        }
+
+        let userObj = new User("Ardra",22,"ardra@gmail.com");
+        
+        userObj.setEmail = "ardra2003@gmail.com";
+        userObj.setEmail = "ardragmail.com";
+
+        document.getElementById("op").innerHTML += "Name : "+userObj.getName+"<br>Age : "+userObj.getAge+"<br>Email : "+userObj.email;
+    </script>
+</body>
+</html>
