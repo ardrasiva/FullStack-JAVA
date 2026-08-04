@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON User Info</title>
+</head>
+<body>
+    <h3 align = "center">User Information</h3>
+    <p id = "output"></p>
+    <script>
+        let user = `{
+            "name" : "Ardra",
+            "email" : "ardrasivaprasad17@gmail.com",
+            "message" : "Hi"
+        }`;
+        //console.log(typeof user)
+        displayUser = () =>{
+            try {
+                let userObj = JSON.parse(user);
+                document.getElementById("output").innerHTML = "Message Received from "+userObj.name;
+                console.log("Message Received from "+userObj.name);
+            } catch (error) {
+                document.getElementById("output").innerHTML = error.message;
+                console.log(error.message)
+            }
+        }
+
+        displayUser();
+    </script>
+</body>
+</html>
