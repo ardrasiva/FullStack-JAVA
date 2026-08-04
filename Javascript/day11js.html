@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book</title>
+</head>
+<body>
+    <h3 align = "center">Book Information</h3>
+    <p id = "output"></p>
+    <script>
+        class Book{
+            constructor(title,author,price){
+                this.title = title;
+                this.author = author;
+                this.price = price;
+            }
+
+            get gettitle(){
+                return this.title;
+            }
+            get getauthor(){
+                return this.author;
+            }
+
+            set setprice(newPrice){
+                if(typeof newPrice === "number" && newPrice > 0){
+                    this.price = newPrice
+                }
+                else{
+                    document.getElementById("output").innerHTML = "Invalid value. Price should be greater than 0!<br><br>"
+                }
+
+            }
+        }
+
+        bookObj = new Book("Mercury Island","Akhil",399);
+        bookObj.setprice = 590;
+        bookObj.setprice = 0;
+        document.getElementById("output").innerHTML += "Book Title : "+bookObj.gettitle+"<br>Author : "+bookObj.getauthor+"<br>Price : "+bookObj.price
+    </script>
+</body>
+</html>
