@@ -23,7 +23,9 @@
             let name = document.getElementById("input").value;
             let fb = document.getElementById("feedback").value;
             document.getElementById("output").innerHTML = "Name : "+name+"<br>Feedback Messsage : "+fb;
-            document.getElementById("thankMessage").innerHTML = "Thanks for your feedback!";
+            let fbMsg =  "Thanks for your feedback!";
+            document.getElementById("thankMessage").innerHTML = fbMsg;
+            document.getElementById("thankMessage").style.color = "green";
             setTimeout(function(){
                     document.getElementById("thankMessage").innerHTML = "";
                 },5000)
