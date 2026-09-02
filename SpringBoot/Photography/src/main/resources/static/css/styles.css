@@ -1,0 +1,8 @@
+body{
+    background-color: rgb(222, 200, 173);
+}
+
+button{
+    display: block;
+    margin: auto;
+}
