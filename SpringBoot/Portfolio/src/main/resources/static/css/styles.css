@@ -1,0 +1,15 @@
+body{
+	text-align: center;
+	background-color: cadetblue;
+}
+
+img{
+	display: block;
+	margin: auto;
+}
+
+
+button{
+	display: block;
+	margin: auto;
+}
