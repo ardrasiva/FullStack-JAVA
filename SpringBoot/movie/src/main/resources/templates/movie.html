@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Site</title>
+</head>
+<body>
+    <h1 th:utext="${Title}"></h1>
+    <p th:text="${FirstLine}"></p>
+    <div th:if="${login}">
+        <p th:utext="${movieDesc}"></p>
+    </div>
+    <div th:if="${!login}">
+        <p>Please log in to read the full movie description.</p>
+    </div>
+</body>
+</html>
