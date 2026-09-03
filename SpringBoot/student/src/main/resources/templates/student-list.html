@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List of Students</title>
+</head>
+<body>
+    <h1 align="center">List of students</h1>
+    <table border="1" align="center">
+        <thead>
+            <tr>
+                <th>Roll num</th>
+                <th>Name</th>
+                <th>Marks</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="st : ${studentlist}">
+                <td th:text="${st.Rollnum}"></td>
+                <td th:text="${st.Name}"></td>
+                <td th:text="${st.marks}"></td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
