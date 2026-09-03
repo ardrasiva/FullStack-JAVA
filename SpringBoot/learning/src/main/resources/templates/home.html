@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Spring</title>
+</head>
+<body>
+    <div th:utext="${HeadingMsg}"></div>
+    <p th:text = "${WelcomeMsg}"></p>
+    <div th:if="${isLoggedIn}">
+        <h1>Welcome back, Student!</h1>
+    </div>
+    <div th:if="${!isLoggedIn}">
+        <h1>Please log in to access the lessons</h1>
+    </div>
+</body>
+</html>
