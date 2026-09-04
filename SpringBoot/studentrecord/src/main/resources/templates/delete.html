@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Student</title>
+</head>
+<body>
+
+    <h1>Delete Student</h1>
+
+    <p>Are you sure you want to delete this student?</p>
+
+    <p>
+        Name:
+        <span th:text="${StudentDetails.name}"></span>
+    </p>
+
+    <p>
+        Class:
+        <span th:text="${StudentDetails.classname}"></span>
+    </p>
+
+    <p>
+        Age:
+        <span th:text="${StudentDetails.age}"></span>
+    </p>
+
+    <form th:action="@{/delete/{id}(id=${StudentDetails.id})}"
+          method="post">
+
+        <button type="submit">Yes, Delete</button>
+
+    </form>
+
+    <br>
+
+    <a href="/all">Cancel</a>
+
+</body>
+</html>

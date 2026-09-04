@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Student</title>
+</head>
+<body>
+
+    <h1>Update Student</h1>
+
+    <form th:action="@{/update/{id}(id=${StudentDetails.id})}"
+          method="post">
+
+        <label>Name:</label>
+        <input type="text" name="name" th:value="${StudentDetails.name}">
+        <br><br>
+
+        <label>Class:</label>
+        <input type="text" name="classname" th:value="${StudentDetails.classname}">
+        <br><br>
+
+        <label>Age:</label>
+        <input type="number" name="age" th:value="${StudentDetails.age}">
+        <br><br>
+
+        <button type="submit">Update Student</button>
+
+    </form>
+
+    <br>
+
+    <a href="/all">Back to Student List</a>
+
+</body>
+</html>
