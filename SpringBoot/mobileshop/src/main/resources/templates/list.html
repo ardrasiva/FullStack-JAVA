@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile List</title>
+</head>
+<body>
+
+    <h2>Mobile Phone List</h2>
+
+    <a href="/create">Add New Phone</a>
+
+    <br><br>
+
+    <table border="1">
+
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Actions</th>
+        </tr>
+
+        <tr th:each="mobile : ${listofphones}">
+
+            <td th:text="${mobile.id}"></td>
+            <td th:text="${mobile.name}"></td>
+            <td th:text="${mobile.description}"></td>
+            <td th:text="${mobile.price}"></td>
+
+            <td>
+                <a th:href="@{/update/{id}(id=${mobile.id})}">Edit</a>
+
+                &nbsp;
+
+                <a th:href="@{/delete/{id}(id=${mobile.id})}">Delete</a>
+            </td>
+
+        </tr>
+
+    </table>
+
+</body>
+</html>
