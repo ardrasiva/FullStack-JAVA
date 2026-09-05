@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dish Details</title>
+</head>
+<body>
+    <p th:if="${message}" th:text="${message}"></p>
+    <div th:if="${dishdetails}">
+        <h1 align = "center">Dish Details</h1>
+        <p align="center">Dish name : <span th:text="${dishdetails.name}"></span></p>
+        <p align="center">Price : <span th:text="${dishdetails.price}"></span></p>
+    </div>
+</body>
+</html>
