@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Details</title>
+</head>
+<body>
+
+    <h2 align="center">Mobile Inventory</h2>
+
+    <a href="/create">Add New Phone</a>
+
+    <br><br>
+
+    <h3>All Phone Names and Prices</h3>
+
+    <table border="1">
+
+        <tr>
+            <th>Phone Name</th>
+            <th>Price</th>
+        </tr>
+
+        <tr th:each="mobile : ${namesAndPrices}">
+
+            <td th:text="${mobile[0]}"></td>
+            <td th:text="${mobile[1]}"></td>
+
+        </tr>
+
+    </table>
+
+
+    <br><br>
+
+
+    <h3>Phones Below ₹20,000</h3>
+
+    <table border="1">
+
+        <tr>
+            <th>Phone Name</th>
+            <th>Brand</th>
+            <th>Price</th>
+            <th>Type</th>
+        </tr>
+
+        <tr th:each="mobile : ${phonesBelow20k}">
+
+            <td th:text="${mobile.phoneName}"></td>
+            <td th:text="${mobile.brand}"></td>
+            <td th:text="${mobile.price}"></td>
+            <td th:text="${mobile.type}"></td>
+
+        </tr>
+
+    </table>
+
+
+    <br><br>
+
+
+    <h3>Total Number of Phones Grouped by Type</h3>
+
+    <table border="1">
+
+        <tr>
+            <th>Type</th>
+            <th>Total Phones</th>
+        </tr>
+
+        <tr th:each="mobile : ${typeAndCount}">
+
+            <td th:text="${mobile[0]}"></td>
+            <td th:text="${mobile[1]}"></td>
+
+        </tr>
+
+    </table>
+
+</body>
+</html>

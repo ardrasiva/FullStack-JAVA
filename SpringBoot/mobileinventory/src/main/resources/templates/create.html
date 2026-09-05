@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Mobile</title>
+</head>
+<body>
+
+    <h2 align="center">Mobile Inventory</h2>
+
+    <p align="center" th:text="${message}"></p>
+
+    <form action="/create" method="post">
+
+        <label>Phone Name:</label>
+        <input type="text" name="phoneName">
+        <br><br>
+
+        <label>Brand:</label>
+        <input type="text" name="brand">
+        <br><br>
+
+        <label>Price:</label>
+        <input type="number" step="0.01" name="price">
+        <br><br>
+
+        <label>Type:</label>
+        <select name="type">
+            <option value="Android">Android</option>
+            <option value="iPhone">iPhone</option>
+        </select>
+        <br><br>
+
+        <button type="submit">Add Phone</button>
+
+    </form>
+
+    <br>
+
+    <a href="/all">View All Details</a>
+
+</body>
+</html>
