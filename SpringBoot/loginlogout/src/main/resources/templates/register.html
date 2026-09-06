@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Registration</title>
+</head>
+
+<body>
+
+    <h1>Sign Up</h1>
+
+    <p th:if="${message}" th:text="${message}"></p>
+
+    <form th:action="@{/registration}"
+          method="post"
+          th:object="${user}"
+          onsubmit="return validatePassword()">
+
+        <label>Email:</label>
+        <input type="email"
+               th:field="*{email}"
+               required>
+        <br><br>
+
+        <label>Password:</label>
+        <input type="password"
+               id="password"
+               th:field="*{password}"
+               required>
+        <br><br>
+
+        <label>Confirm Password:</label>
+        <input type="password"
+               id="confirmPassword"
+               th:field="*{confirmPassword}"
+               required>
+        <br><br>
+
+        <p id="passwordMessage"></p>
+
+        <label>Full Name:</label>
+        <input type="text"
+               th:field="*{fullName}"
+               required>
+        <br><br>
+
+        <label>Last Name:</label>
+        <input type="text"
+               th:field="*{lastName}"
+               required>
+        <br><br>
+
+        <label>Address:</label>
+        <textarea th:field="*{address}"
+                  required></textarea>
+        <br><br>
+
+        <button type="submit">Register</button>
+
+    </form>
+
+    <br>
+
+    <a href="/login">
+        Already have an account? Login
+    </a>
+
+
+    <script>
+
+        function validatePassword() {
+
+            let password =
+                document.getElementById("password").value;
+
+            let confirmPassword =
+                document.getElementById("confirmPassword").value;
+
+            let message =
+                document.getElementById("passwordMessage");
+
+            if (password !== confirmPassword) {
+
+                message.innerHTML =
+                    "Password and Confirm Password do not match!";
+
+                return false;
+            }
+
+            return true;
+        }
+
+    </script>
+
+</body>
+</html>
