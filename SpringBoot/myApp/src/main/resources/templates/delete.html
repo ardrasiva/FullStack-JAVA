@@ -1,15 +1,54 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
+
 <head>
+
+    <meta charset="UTF-8">
+
     <title>Delete Product</title>
+
 </head>
+
 <body>
-<h1>Delete Product</h1>
-<p>Are you sure you want to delete <span th:text="${productDetails.name}"></span>?</p>
-<form action="#" th:action="@{/delete/{id}(id=${productDetails.id})}" method="post">
-    <input type="hidden" name="name" th:value="${productDetails.name}" />
-    <input type="submit" value="Delete" />
+
+<h2>Delete Product</h2>
+
+<p>
+    Are you sure you want to delete this product?
+</p>
+
+<p>
+    Name:
+    <span th:text="${ProductDetails.name}">
+    </span>
+</p>
+
+<p>
+    Description:
+    <span th:text="${ProductDetails.description}">
+    </span>
+</p>
+
+<p>
+    Price:
+    <span th:text="${ProductDetails.price}">
+    </span>
+</p>
+
+<form th:action="@{/delete/{id}(id=${ProductDetails.id})}"
+      method="post">
+
+    <button type="submit">
+        Yes, Delete
+    </button>
+
 </form>
-<a href="/all">Cancel</a>
+
+<br>
+
+<a href="/all">
+    Cancel
+</a>
+
 </body>
 </html>

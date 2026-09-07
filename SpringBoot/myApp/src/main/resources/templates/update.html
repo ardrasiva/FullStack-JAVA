@@ -1,20 +1,74 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
+
 <head>
+
+    <meta charset="UTF-8">
+
     <title>Update Product</title>
+
 </head>
+
 <body>
-<h1>Update Product</h1>
-<form action="#" th:action="@{/update/{id}(id=${productDetails.id})}" method="post">
-    <label>Name:</label>
-    <input type="text" name="name" th:value="${productDetails.name}" required /><br/>
-    <label>Description:</label>
-    <input type="text" name="description" th:value="${productDetails.description}" required /><br/>
-    <label>Expiry Date:</label>
-    <input type="text" name="expirydate" th:value="${productDetails.expirydate}" required /><br/>
-    <label>Price:</label>
-    <input type="text" name="price" th:value="${productDetails.price}" required /><br/>
-    <input type="submit" value="Update" />
+
+<h2>Update Product</h2>
+
+<form th:action="@{/update/{id}(id=${ProductDetails.id})}"
+      method="post"
+      th:object="${ProductDetails}">
+
+    <div>
+
+        <label>
+            Name :
+            <input type="text"
+                   th:field="*{name}">
+        </label>
+
+    </div>
+
+    <br>
+
+    <div>
+
+        <label>
+            Description :
+            <textarea th:field="*{description}">
+            </textarea>
+        </label>
+
+    </div>
+
+    <br>
+
+    <div>
+
+        <label>
+            Price :
+            <input type="text"
+                   th:field="*{price}">
+        </label>
+
+    </div>
+
+    <br>
+
+    <div>
+
+        <label>
+            Expiry Date :
+            <input type="text"
+                   th:field="*{expirydate}">
+        </label>
+
+    </div>
+
+    <br>
+
+    <input type="submit"
+           value="Update">
+
 </form>
+
 </body>
 </html>

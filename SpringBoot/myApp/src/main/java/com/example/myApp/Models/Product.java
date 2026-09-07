@@ -8,6 +8,7 @@ import jakarta.persistence.Id;
 
 @Entity
 public class Product {
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
@@ -18,13 +19,12 @@ public class Product {
     @Column(length = 255)
     private String description;
 
-    @Column(length = 10) // Adjust based on your date format
+    @Column(length = 10)
     private String expirydate;
 
     @Column(length = 10)
     private String price;
 
-    // Getters and Setters
     public Integer getId() {
         return id;
     }

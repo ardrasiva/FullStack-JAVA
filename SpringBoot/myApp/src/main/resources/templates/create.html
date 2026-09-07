@@ -1,21 +1,79 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
+
 <head>
+
+    <meta charset="UTF-8">
+
     <title>Create Product</title>
+
+    <link rel="stylesheet"
+          th:href="@{../css/styles.css}">
+
 </head>
+
 <body>
-  <h1>Create Product</h1>
-  <p th:text="${message}"></p>
-  <form action="#" th:action="@{/create}" method="post">
-    <label>Name:</label>
-    <input type="text" name="name" required /><br/>
-    <label>Description:</label>
-    <input type="text" name="description" required /><br/>
-    <label>Expiry Date:</label>
-    <input type="text" name="expirydate" required /><br/>
-    <label>Price:</label>
-    <input type="text" name="price" required /><br/>
-    <input type="submit" value="Create" />
-  </form>
+
+<div class="container">
+
+    <h2 th:if="${message}"
+        th:text="${message}">
+    </h2>
+
+    <form th:action="@{/create}"
+          method="post">
+
+        <div>
+            <label>
+                Name :
+                <input type="text"
+                       name="name">
+            </label>
+        </div>
+
+        <br>
+
+        <div>
+            <label>
+                Description :
+                <textarea name="description"></textarea>
+            </label>
+        </div>
+
+        <br>
+
+        <div>
+            <label>
+                Price :
+                <input type="text"
+                       name="price">
+            </label>
+        </div>
+
+        <br>
+
+        <div>
+            <label>
+                Expiry Date :
+                <input type="text"
+                       name="expirydate">
+            </label>
+        </div>
+
+        <br>
+
+        <input type="submit"
+               value="Submit">
+
+    </form>
+
+    <br>
+
+    <a href="/all">
+        View All Products
+    </a>
+
+</div>
+
 </body>
 </html>
